@@ -21,35 +21,35 @@ void imprimirArray(int v[], int n) {
 }
 
 int main() {
-    // Teste 1: n = 0
+    
     int v1[] = {};
     printf("n=0: ");
     imprimirArray(v1, 0);
 
-    // Teste 2: n = 1
+
     int v2[] = {5};
     printf("n=1: ");
     imprimirArray(v2, 1);
 
-    // Teste 3: Elementos repetidos (crescente)
+
     int v3[] = {3, 1, 3, 1, 3};
     bubbleSortOrdem(v3, 5, 1);
     printf("Repetidos crescente: ");
     imprimirArray(v3, 5);
 
-    // Teste 4: Elementos repetidos (decrescente)
+
     int v4[] = {3, 1, 3, 1, 3};
     bubbleSortOrdem(v4, 5, -1);
     printf("Repetidos decrescente: ");
     imprimirArray(v4, 5);
 
-    // Teste 5: Positivos e negativos (crescente)
+
     int v5[] = {-5, 3, -1, 0, 8, -10};
     bubbleSortOrdem(v5, 6, 1);
     printf("Posit/Negat crescente: ");
     imprimirArray(v5, 6);
 
-    // Teste 6: Positivos e negativos (decrescente)
+
     int v6[] = {-5, 3, -1, 0, 8, -10};
     bubbleSortOrdem(v6, 6, -1);
     printf("Posit/Negat decrescente: ");

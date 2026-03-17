@@ -1,22 +1,21 @@
 #include <stdio.h>
 
 /*
- * Bubble Sort Otimizado com flag de early stop.
- *
- * Por que melhora o melhor caso de O(n^2) para O(n)?
- * -----------------------------------------
- * No Bubble Sort normal, os dois lacos sempre executam ate o fim,
- * independente de o vetor ja estar ordenado ou não: O(n^2) em todos os casos.
- *
- * Com a flag 'houveTroca', algo muda:
- *   - Ao iniciar cada passada externa (i), a flag e resetada para 0.
- *   - Se nenhuma troca ocorrer durante a passada interna(j), o vetor ja
- *     esta ordenado e o laco externo é interrompido com break.
- *   - No melhor caso (vetor ja ordenado), a primeira passada percorre
- *     os n-1 elementos sem trocar nenhum par, detecta houveTroca == 0
- *     e para imediatamente: apenas n-1 comparacoes -> O(n).
- *   - No pior caso (ordem inversa) o comportamento continua O(n^2),
- *     pois havera troca em toda passada ate o fim.
+  Bubble Sort Otimizado com flag de early stop.
+ 
+  Por que melhora o melhor caso de O(n^2) para O(n)?
+  No Bubble Sort normal, os dois lacos sempre executam ate o fim,
+  independente de o vetor ja estar ordenado ou não: O(n^2) em todos os casos.
+ 
+  Com a flag 'houveTroca', algo muda:
+     Ao iniciar cada passada externa (i), a flag e resetada para 0.
+     Se nenhuma troca ocorrer durante a passada interna(j), o vetor ja
+      esta ordenado e o laco externo é interrompido com break.
+     No melhor caso (vetor ja ordenado), a primeira passada percorre
+      os n-1 elementos sem trocar nenhum par, detecta houveTroca == 0
+      e para imediatamente: apenas n-1 comparacoes -> O(n).
+     No pior caso (ordem inversa) o comportamento continua O(n^2),
+     pois havera troca em toda passada ate o fim.
  */
 void bubbleSortOptimizado(int v[], int n)
 {

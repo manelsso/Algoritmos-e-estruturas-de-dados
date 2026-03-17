@@ -5,18 +5,18 @@ void selectionSort(int arr[], int n, int ordem) {
         int extremo = i;
         for (int j = i + 1; j < n; j++) {
             if (ordem == 1) {
-                // Crescente
+                
                 if (arr[j] < arr[extremo]) {
                     extremo = j;
                 }
             } else {
-                // Decrescente
+                
                 if (arr[j] > arr[extremo]) {
                     extremo = j;
                 }
             }
         }
-        // Troca
+        
         int temp = arr[i];
         arr[i] = arr[extremo];
         arr[extremo] = temp;
@@ -34,7 +34,7 @@ int main() {
     int vetor[] = {64, 34, 25, 12, 22, 11, 90};
     int n = sizeof(vetor) / sizeof(vetor[0]);
 
-    // Teste 1: Ordem Crescente (1)
+    
     int vetor1[7];
     for (int i = 0; i < n; i++) {
         vetor1[i] = vetor[i];
@@ -46,7 +46,7 @@ int main() {
     printf("Ordem Crescente: ");
     exibirVetor(vetor1, n);
 
-    // Teste 2: Ordem Decrescente (-1)
+    
     int vetor2[7];
     for (int i = 0; i < n; i++) {
         vetor2[i] = vetor[i];
